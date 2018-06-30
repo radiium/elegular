@@ -1,27 +1,34 @@
 # Elegular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+> Electron angular boilerplate
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development:
 
-## Code scaffolding
+#### Run in browser at 'http://localhost:4200' (*Electron features not available in this mode*)
+> ng serve
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Run in electron
+> npm run electron:dev
 
-## Build
+#### Run in electron with live reload
+> npm run start:electron:reload
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Package for: windows, ubuntu/debian and mac os
+> npm run pack
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Made with
 
-## Running end-to-end tests
+- [angular 6](https://angular.io/) and [angular-cli](https://github.com/angular/angular-cli)
+- [angular material](https://material.angular.io/)
+- [electron](https://electron.atom.io/), [electron builder](https://github.com/electron-userland/electron-builder/) and [ngx-electron](https://github.com/ThorstenHans/ngx-electron)
+- [RxJS](http://reactivex.io/rxjs/)
+- [material design icons](https://materialdesignicons.com/)
+- [lodash](https://lodash.com/)
+- [moment](https://momentjs.com/)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[MIT](LICENCE.md)
