@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DomSanitizer } from '@angular/platform-browser';
+
+// Use noopAnimation because browserAnimation cause error with some material component animation
+// See here for a possible but instable solution:
+// https://github.com/angular/material2/issues/10748#issuecomment-387964691
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgxElectronModule } from 'ngx-electron';
 import { MatIconRegistry, MatIconModule } from '@angular/material';
-import { CustomMaterialModule } from './modules/material/custom-material.module';
 
 @NgModule({
     entryComponents: [
@@ -24,7 +28,6 @@ import { CustomMaterialModule } from './modules/material/custom-material.module'
         ReactiveFormsModule,
         NgxElectronModule,
         MatIconModule,
-        CustomMaterialModule,
     ],
     exports: [
         CommonModule,
@@ -34,7 +37,6 @@ import { CustomMaterialModule } from './modules/material/custom-material.module'
         ReactiveFormsModule,
         NgxElectronModule,
         MatIconModule,
-        CustomMaterialModule,
     ],
     providers: [],
 })
