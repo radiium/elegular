@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+// You can add global styles to this file, and also import other style files
+
+// Angular Material prebuilt theme
+// For other prebuilt theme, check in folder: ~/node_modules/@angular/material/prebuilt-themes/
+// Check documentation at: https://material.angular.io/guide/theming
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
