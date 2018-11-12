@@ -2,6 +2,7 @@
 
 ## Description:
 A preconfigured Electron + Angular boilerplate with typescript, sass and hot reload.
+Inspired from: [github.com/maximegris/angular-electron/](https://github.com/maximegris/angular-electron/)
 
 #### built with:
 
