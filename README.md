@@ -18,16 +18,17 @@ npm install
 
 ##### Run the app:
 
+
 | Command | Description |
 |---------|-------------|
+| `npm run start` | Start app in dev mode with hot-reload  |
+| `npm run start:prod` | Start app in electron with prod mode |
 | `npm run start:web` | Start app in browser at http://localhost:4200 (without electron) |
-| `npm run start:dev` | Start app in electron |
-| `npm run start:prod` | Start app in electron |
-| `npm run start:reload` | Start app in electron with hot-reload mode |
-| `npm run release -- -l` | Build and release for Linux |
-| `npm run release -- -m` | Build and release for Mac |
-| `npm run release -- -w` | Build and release for Windows |
-| `npm run release:all` | Build and release for all platform (linux/mac/windows) |
+| `npm run release` | Build and release for the current target |
+| `npm run release -- -linux` | Build and release for Linux target |
+| `npm run release -- --mac` | Build and release for Mac target |
+| `npm run release -- -win` | Build and release for Windows  target|
+| `npm run release:all` | Build and release for all platform target (linux/mac/windows) |
 
 
 ## Made with
