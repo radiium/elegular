@@ -1,7 +1,3 @@
-// Setup default environment
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-console.log(`Electron launching with NODE_ENV: ${process.env.NODE_ENV}`);
-
 
 // Import dependencies
 import { app, BrowserWindow, ipcMain, ipcRenderer, Menu, shell, dialog, session } from 'electron';
@@ -18,8 +14,12 @@ import { editMenuTemplate } from './menu/edit_menu.template';
 // Init variable
 let mainWindow: any = null;
 const menus: any[] = [];
-const isDev = process.env.NODE_ENV === 'development' ? true : false;
 
+// Setup default environment
+const args = process.argv.slice(1);
+const isDev = args.some(val => val === '--dev');
+console.log('isDev', isDev);
+console.log('Electron launching mode :', isDev ? 'development' : 'production');
 
 // Init context menu
 if (isDev) {
@@ -66,6 +66,7 @@ const createMainWindow = async () => {
             protocol: 'file:',
             slashes: true,
         }));
+        mainWindow.webContents.openDevTools();
     }
 
     mainWindow.on('closed', () => mainWindow = null);
