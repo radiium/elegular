@@ -1,19 +1,15 @@
 import { Component } from '@angular/core';
-// import * as fs from 'fs';
+import { ElectronService } from 'core/services/electron.service';
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'elegular';
-  fs: any; // typeof fs;
+    title = 'elegular';
 
-  constructor() {
-    // this.fs = window.require('fs');
-    console.log('Test');
-    console.log(this.fs);
-  }
+    constructor(private electronSrv: ElectronService) {
+    }
 }
