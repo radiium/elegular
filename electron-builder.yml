@@ -1,24 +1,34 @@
 appId: com.radiium.elegular
 copyright: "LICENSE MIT "
 productName: elegular
-# forceCodeSigning: true
 asar: true
 artifactName: "${productName}-${os}-${arch}-${version}.${ext}"
 compression: maximum
+npmRebuild: true
+nodeGypRebuild: false
 directories:
   app: "dist"
   output: "release"
   buildResources: "build"
+
+# Include/exclude files
+files:
+  - "**/*"
+  - "!**/node_modules/*/{CHANGELOG.md,README.md,README,readme.md,readme,test,__tests__,tests,powered-test,example,examples,*.d.ts}"
+  - "!**/*.{o,hprof,orig,pyc,pyo,rbc}"
+  - "!**/{._*,.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,__pycache__,thumbs.db,.gitignore,.gitattributes,.editorconfig,.flowconfig,.yarn-metadata.json,.idea,appveyor.yml,.travis.yml,circle.yml,npm-debug.log,.nyc_output,yarn.lock,.yarn-integrity}"
+  - "!**/node_modules/search-index/si${/*}"
+
+# Mac packaging
 mac:
-  icon: "build/icons/mac/turntable1024.icns"
+  icon: "build/icons/mac/icon.icns"
   category: "public.app-category.entertainment"
   identity: null
   target:
     - dmg
 dmg:
-  icon: "build/icons/mac/turntable128.icns"
+  icon: "build/icons/mac/icon.icns"
   iconSize: 128
-  background: "build/icons/mac/turntable-bcg.png"
   contents:
     - x: 532
       y: 249
@@ -28,6 +38,7 @@ dmg:
       y: 249
       type: file
 
+# Linux packaging
 linux:
   icon: "build/icons/linux/"
   category: "GNOME;GTK;Music;AudioVideo"
@@ -36,13 +47,13 @@ linux:
   maintainer: "Radiium <remip.dev@gmail.com>"
   target:
     - deb
-    - rpm
-    - AppImage
 
+# Windows packaging
 win:
-  icon: "build/icons/win/turntable1024.ico"
+  icon: "build/icons/win/icon.ico"
   target:
     - nsis
+    - portable
 nsis:
   oneClick: true
   perMachine: true
