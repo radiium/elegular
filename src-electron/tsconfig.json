@@ -6,9 +6,16 @@
         "experimentalDecorators": true,
         "lib": ["es6", "dom"],
         "module": "commonjs",
-        "mapRoot": "./",
         "moduleResolution": "node",
         "sourceMap": true,
-        "target": "es5"
-    }
+        "target": "es5",
+        "baseUrl": ".",
+        "paths": {
+            "*": ["node_modules/*"]
+        }
+    },
+    "include": [
+    "./**/*"
+    ]
 }
+
