@@ -22,5 +22,12 @@
       "shared/*": [ "app/_shared/*" ],
       "core/*": [ "app/_core/*" ]
     }
-  }
+  },
+  "include": [
+    "main.ts",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
