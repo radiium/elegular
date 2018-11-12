@@ -1,11 +1,13 @@
 appId: com.radiium.elegular
-copyright: "LICENSE MIT "
+copyright: "LICENSE MIT"
 productName: elegular
 asar: true
 artifactName: "${productName}-${os}-${arch}-${version}.${ext}"
 compression: maximum
 npmRebuild: true
 nodeGypRebuild: false
+publish: null
+
 directories:
   app: "dist"
   output: "release"
@@ -57,3 +59,5 @@ win:
 nsis:
   oneClick: true
   perMachine: true
+portable:
+  artifactName: "${productName}-${os}-${arch}-${version}_portable.${ext}"
