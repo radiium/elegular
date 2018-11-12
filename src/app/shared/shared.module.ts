@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { DomSanitizer } from '@angular/platform-browser';
 
 // Use noopAnimation because browserAnimation cause error with some material component animation
 // See here for a possible but instable solution:
@@ -11,7 +10,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgxElectronModule } from 'ngx-electron';
-import { MatIconRegistry, MatIconModule } from '@angular/material';
 
 @NgModule({
     entryComponents: [
@@ -26,8 +24,7 @@ import { MatIconRegistry, MatIconModule } from '@angular/material';
         // BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        NgxElectronModule,
-        MatIconModule,
+        NgxElectronModule
     ],
     exports: [
         CommonModule,
@@ -35,15 +32,8 @@ import { MatIconRegistry, MatIconModule } from '@angular/material';
         // BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        NgxElectronModule,
-        MatIconModule,
+        NgxElectronModule
     ],
     providers: [],
 })
-export class SharedModule {
-    constructor(
-    matIconRegistry: MatIconRegistry,
-    domSanitizer: DomSanitizer) {
-        matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/mdi.svg'));
-    }
-}
+export class SharedModule {}

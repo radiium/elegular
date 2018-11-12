@@ -1,7 +1,10 @@
 import { NgModule,  } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer } from '@angular/platform-browser';
 
 import {
+    MatIconModule,
+    MatIconRegistry,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -12,7 +15,6 @@ import {
     MatDialogModule,
     MatExpansionModule,
     MatGridListModule,
-    MatIconModule,
     MatInputModule,
     MatListModule,
     MatMenuModule,
@@ -36,9 +38,12 @@ import { OverlayModule } from '@angular/cdk/overlay';
 
 
 @NgModule({
+    declarations: [
+    ],
     imports: [
     ],
     exports: [
+        MatIconModule,
         CommonModule,
         MatAutocompleteModule,
         MatButtonModule,
@@ -50,7 +55,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
         MatDialogModule,
         MatExpansionModule,
         MatGridListModule,
-        MatIconModule,
         MatInputModule,
         MatListModule,
         MatMenuModule,
@@ -70,7 +74,12 @@ import { OverlayModule } from '@angular/cdk/overlay';
         MatTooltipModule,
         MatBadgeModule,
         OverlayModule
-    ],
-    declarations: []
+    ]
 })
-export class CustomMaterialModule { }
+export class CustomMaterialModule {
+    constructor(
+        matIconRegistry: MatIconRegistry,
+        domSanitizer: DomSanitizer) {
+            matIconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('./assets/icons/mdi.svg'));
+        }
+}
