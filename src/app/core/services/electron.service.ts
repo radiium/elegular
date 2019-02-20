@@ -25,12 +25,6 @@ export class ElectronService {
             this.remote = window.require('electron').remote;
             this.childProcess = window.require('child_process');
             this.fs = window.require('fs');
-
-            // Test fs
-            this.fs.readdir('./', (err, data) => {
-                if (err) { throw new Error(err.stack); }
-                console.log(data);
-            });
         } else {
             console.log('Electron not available');
         }
