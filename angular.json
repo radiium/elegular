@@ -21,7 +21,7 @@
               "path": "./extra-webpack.config.js"
             },
             "baseHref": "",
-            "outputPath": "dist",
+            "outputPath": "dist/renderer",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
