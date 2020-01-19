@@ -1,6 +1,22 @@
 {
   "name": "elegular",
-  "version": "0.0.0",
+  "version": "8.0.0",
+  "license": "MIT",
+  "description": "Electron + Angular 7 boilerplate",
+  "homepage": "https://github.com/radiium/elegular",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radiium/elegular.git"
+  },
+  "author": {
+    "name": "radiium",
+    "email": "remip.dev@gmail.com",
+    "url": "https://github.com/radiium"
+  },
+  "keywords": [
+    "electron",
+    "angular 8"
+  ],
   "scripts": {
     "test": "ng test",
     "lint": "ng lint",
