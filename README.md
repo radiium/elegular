@@ -2,33 +2,34 @@
 
 ## Description:
 A preconfigured Electron + Angular boilerplate with typescript, sass and hot reload.
-Some parts are inspired by: [github.com/maximegris/angular-electron/](https://github.com/maximegris/angular-electron/)
 
 #### built with:
 
-- [electron](https://electron.atom.io/), [electron builder](https://github.com/electron-userland/electron-builder/) and [ngx-electron](https://github.com/ThorstenHans/ngx-electron)
-- [angular 7](https://angular.io/) and [angular-cli](https://cli.angular.io)
-- [angular material](https://material.angular.io/) and [material design icons](https://materialdesignicons.com/)
-
-- [RxJS](http://reactivex.io/rxjs/)
-- [Reset CSS (By Eric meyer)](    http://meyerweb.com/eric/tools/css/reset/)
+- [electron](https://electron.atom.io/)
+- [electron builder](https://github.com/electron-userland/electron-builder/) 
+- [electron-reload](https://github.com/yan-foto/electron-reload#readme)
+- [electron-context-menu](https://github.com/sindresorhus/electron-context-menu)
+- [angular 8](https://angular.io/)
+- [ngx-electron](https://github.com/ThorstenHans/ngx-electron)
+- [Reset CSS (By Eric meyer)](http://meyerweb.com/eric/tools/css/reset/)
 
 #### Project structure:
 ```bash
 /elegular
-  ├── LICENCE.md
-  ├── README.md
-  ├── angular.json
   ├── build # Electron assets files (desktop icons etc...)
-  ├── dist # Electron and Angular build output
+  ├── dist # Build output folder
+  ├── release # Release output folder (build executable)
   ├── e2e
-  ├── electron-builder.yml # electron-builder configuration
-  ├── extra-webpack.config.js # Extra webpack config (custom angular cli build)
+  ├── src # Angular source code
+  ├── src-electron # Electron source code
+  ├── .editorconfig
+  ├── .gitignore
+  ├── angular.json
   ├── package-lock.json
+  ├── LICENCE.md
   ├── package.json
-  ├── release # electron-builder output folder 
-  ├── src # Angular app source code
-  ├── src-electron # Electron backend source code
+  ├── README.md
+  ├── electron-builder.yml # electron-builder configuration
   ├── tsconfig.json
   └── tslint.json
 ```
@@ -37,9 +38,7 @@ Some parts are inspired by: [github.com/maximegris/angular-electron/](https://gi
 
 #### Prerequisites:
 For run this project, you need to install the following:  
-- [Nodejs](https://nodejs.org) >= 8.9   
-- [Angular CLI](https://cli.angular.io) >= 7.0.0  
-
+- [Nodejs](https://nodejs.org) >= 10   
 
 #### Clone repository and install dependencies:
 ```
@@ -47,7 +46,6 @@ git clone --depth 1 https://github.com/radiium/elegular
 cd elegular
 npm install
 ```
-
 
 #### Available commands:
 
@@ -72,21 +70,6 @@ You can acces to the native node modules inside angular:
 **Important:** This is an experimental feature! 
 For more information, see:
 - Article: [customizing-angular-cli](https://codeburst.io/customizing-angular-cli-6-build-an-alternative-to-ng-eject-a48304cd3b21)
-- Package: [@angular-builders/custom-webpack](https://github.com/meltedspark/angular-builders/tree/master/packages/custom-webpack)
-
-## Angular Material
-See doc and available Angular components: [https://material.angular.io/](https://material.angular.io/)
-
-
-
-## Material design icons
-See list of available icons: [https://materialdesignicons.com/](https://materialdesignicons.com/)
-
-Usage:
-```html
-<mat-icon svgIcon="angular"></mat-icon>
-```
-
 
 
 ## License
