@@ -60,18 +60,6 @@ npm install
 | `npm run release -- -win` | Build and release for Windows  target|
 | `npm run release:all` | Build and release for all platform target (linux/mac/windows) |
 
-
-## Access native node modules in angular:
-
-You can acces to the native node modules inside angular:
-1. Import the module with ```require([module name])``` inside [./extra-webpack.config.js](./extra-webpack.config.js)
-2. Then use it in angular with ```window.require([module name]);```
-
-**Important:** This is an experimental feature! 
-For more information, see:
-- Article: [customizing-angular-cli](https://codeburst.io/customizing-angular-cli-6-build-an-alternative-to-ng-eject-a48304cd3b21)
-
-
 ## License
 
 [MIT](LICENCE.md)
