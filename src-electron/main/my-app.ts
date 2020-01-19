@@ -1,4 +1,4 @@
-import { BrowserWindow, Menu } from 'electron';
+import { BrowserWindow, Menu, shell } from 'electron';
 import path = require('path');
 import url = require('url');
 
@@ -6,6 +6,7 @@ import {
     fileMenuTemplate,
     editMenuTemplate,
     devMenuTemplate } from './menu';
+
 
 export default class MyApp {
     private static _instance: MyApp;
@@ -30,7 +31,7 @@ export default class MyApp {
         }
     };
 
-    private static electronPath = path.join(__dirname, 'node_modules', '.bin', 'electron');
+    private static electronPath = path.resolve(__dirname, '..', '..', 'node_modules', '.bin', 'electron');
     private static appUrlDev = 'http://localhost:4200';
     private static appUrlProd = url.format({
         pathname: path.resolve(__dirname, '..', 'renderer', 'index.html'),
@@ -82,7 +83,27 @@ export default class MyApp {
             hardResetMethod: 'exit'
         });
         require('electron-context-menu')({
-            prepend: (params: any, browserWindow: any) => []
+            showServices: true,
+            prepend: (defaultActions: any, params: any, browserWindow: any) => {
+                /*
+                console.log('defaultActions', defaultActions);
+                console.log('params', params);
+                */
+                return [
+                {
+                    label: 'Rainbow',
+                    visible: params.mediaType === 'image'
+                },
+                {
+                    label: 'Search Google for “{selection}”',
+                    // Only show it when right-clicking text
+
+                    visible: params && params.selectionText.trim().length > 0,
+                    click: () => {
+                        shell.openExternal(`https://google.com/search?q=${encodeURIComponent(params.selectionText)}`);
+                    }
+                }
+            ]}
         });
         this.mainWindow.loadURL(this.appUrlDev);
         this.mainWindow.on('closed', () => this.mainWindow = null);
@@ -126,15 +147,23 @@ export default class MyApp {
     // Clear cache and cookie session before quit
     private static onBeforeQuit() {
         if (!this.isDev()) {
-            this.mainWindow.webContents.session.clearAuthCache({ type: 'password' }, () => {
-                this.log('clearAuthCache');
-            });
-            this.mainWindow.webContents.session.clearCache(() => {
-                this.log('clearCache');
-            });
-            this.mainWindow.webContents.session.clearStorageData({}, () => {
-                this.log('clearStorageData');
-            });
+            this.mainWindow.webContents.session
+                .clearAuthCache({ type: 'password' })
+                .then(() => {
+                    this.log('clearAuthCache');
+                });
+
+            this.mainWindow.webContents.session
+                .clearCache()
+                .then(() => {
+                    this.log('clearCache');
+                });
+
+            this.mainWindow.webContents.session
+                .clearStorageData({})
+                .then(() => {
+                    this.log('clearStorageData');
+                });
         }
     }
 
