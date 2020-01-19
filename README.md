@@ -1,7 +1,7 @@
 # Elegular
 
 ## Description:
-A preconfigured Electron + Angular boilerplate with typescript, sass and hot reload.
+A preconfigured Electron + Angular boilerplate with hot reload and others...
 
 #### built with:
 
