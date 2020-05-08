@@ -21,6 +21,7 @@ export default class MyApp {
         darkTheme: true,
         backgroundColor: '#3b8d99',
         webPreferences: {
+            spellcheck: true,
             nodeIntegration: true,
             /* See electron nodeIntegration security and preload script
             nodeIntegration: false,
