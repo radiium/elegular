@@ -57,9 +57,9 @@
     "codelyzer": "^5.2.2",
     "copyfiles": "^2.2.0",
     "devtron": "^1.4.0",
-    "electron": "^7.1.9",
+    "electron": "^8.2.5",
     "electron-builder": "^22.2.0",
-    "electron-context-menu": "^0.15.2",
+    "electron-context-menu": "^2.0.0",
     "electron-reload": "^1.5.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -75,7 +75,7 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.8.3",
-    "wait-on": "^4.0.0",
+    "wait-on": "^5.0.0",
     "zone.js": "~0.10.2"
   }
 }
