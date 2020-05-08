@@ -2,7 +2,7 @@
   "name": "elegular",
   "version": "8.0.0",
   "license": "MIT",
-  "description": "Electron + Angular 7 boilerplate",
+  "description": "Electron + Angular 9 boilerplate",
   "homepage": "https://github.com/radiium/elegular",
   "repository": {
     "type": "git",
@@ -14,8 +14,9 @@
     "url": "https://github.com/radiium"
   },
   "keywords": [
+    "boilerplate",
     "electron",
-    "angular 8"
+    "angular 9"
   ],
   "scripts": {
     "test": "ng test",

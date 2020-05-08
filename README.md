@@ -1,7 +1,7 @@
 # Elegular
 
 ## Description:
-A preconfigured Electron + Angular boilerplate with hot reload and others...
+A preconfigured Electron + Angular 9 boilerplate with hot reload and others...
 
 #### built with:
 
@@ -9,11 +9,12 @@ A preconfigured Electron + Angular boilerplate with hot reload and others...
 - [electron builder](https://github.com/electron-userland/electron-builder/) 
 - [electron-reload](https://github.com/yan-foto/electron-reload#readme)
 - [electron-context-menu](https://github.com/sindresorhus/electron-context-menu)
-- [angular 8](https://angular.io/)
+- [angular 9](https://angular.io/)
 - [ngx-electron](https://github.com/ThorstenHans/ngx-electron)
 - [Reset CSS (By Eric meyer)](http://meyerweb.com/eric/tools/css/reset/)
 
-#### Project structure:
+#### Project structure:  
+
 ```bash
 /elegular
   ├── build # Electron assets files (desktop icons etc...)
@@ -38,7 +39,7 @@ A preconfigured Electron + Angular boilerplate with hot reload and others...
 
 #### Prerequisites:
 For run this project, you need to install the following:  
-- [Nodejs](https://nodejs.org) >= 10   
+- [Nodejs](https://nodejs.org) >= 10.13  
 
 #### Clone repository and install dependencies:
 ```
