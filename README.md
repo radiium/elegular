@@ -5,7 +5,7 @@ A preconfigured Electron + Angular 9 boilerplate with hot reload and others...
 
 #### built with:
 
-- [electron](https://electron.atom.io/)
+- [electron 9](https://electron.atom.io/)
 - [electron builder](https://github.com/electron-userland/electron-builder/) 
 - [electron-reload](https://github.com/yan-foto/electron-reload#readme)
 - [electron-context-menu](https://github.com/sindresorhus/electron-context-menu)
@@ -39,7 +39,7 @@ A preconfigured Electron + Angular 9 boilerplate with hot reload and others...
 
 #### Prerequisites:
 For run this project, you need to install the following:  
-- [Nodejs](https://nodejs.org) >= 10.13  
+- [Nodejs](https://nodejs.org) >= 12.x.x
 
 #### Clone repository and install dependencies:
 ```
