@@ -1,15 +1,15 @@
 # Elegular
 
 ## Description:
-A preconfigured Electron + Angular 9 boilerplate with hot reload and others...
+A preconfigured Electron + Angular 10 boilerplate with hot reload and others...
 
 #### built with:
 
-- [electron 9](https://electron.atom.io/)
+- [angular 10](https://angular.io/)
+- [electron 10](https://electron.atom.io/)
 - [electron builder](https://github.com/electron-userland/electron-builder/) 
 - [electron-reload](https://github.com/yan-foto/electron-reload#readme)
 - [electron-context-menu](https://github.com/sindresorhus/electron-context-menu)
-- [angular 9](https://angular.io/)
 - [ngx-electron](https://github.com/ThorstenHans/ngx-electron)
 - [Reset CSS (By Eric meyer)](http://meyerweb.com/eric/tools/css/reset/)
 
