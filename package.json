@@ -1,8 +1,8 @@
 {
   "name": "elegular",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "license": "MIT",
-  "description": "Electron + Angular 9 boilerplate",
+  "description": "Electron + Angular 10 boilerplate",
   "homepage": "https://github.com/radiium/elegular",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
   "keywords": [
     "boilerplate",
     "electron",
-    "angular 9"
+    "angular 10"
   ],
   "scripts": {
     "test": "ng test",
@@ -57,9 +57,9 @@
     "codelyzer": "^5.2.2",
     "copyfiles": "^2.3.0",
     "devtron": "^1.4.0",
-    "electron": "^9.1.2",
-    "electron-builder": "^22.8.0",
-    "electron-context-menu": "^2.2.0",
+    "electron": "^10.1.5",
+    "electron-builder": "^22.9.1",
+    "electron-context-menu": "^2.3.0",
     "electron-reload": "^1.5.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
