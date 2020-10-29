@@ -34,7 +34,6 @@
     "release:all": "npm run release -- -lmw",
     "release": "npm run build:all && electron-builder build --config electron-builder.yml"
   },
-  "private": true,
   "dependencies": {
     "tslib": "^2.0.0"
   },
