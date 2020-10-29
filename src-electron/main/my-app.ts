@@ -149,7 +149,7 @@ export default class MyApp {
     private static onBeforeQuit() {
         if (!this.isDev()) {
             this.mainWindow.webContents.session
-                .clearAuthCache({ type: 'password' })
+                .clearAuthCache()
                 .then(() => {
                     this.log('clearAuthCache');
                 });
