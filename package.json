@@ -1,6 +1,6 @@
 {
   "name": "elegular",
-  "version": "10.0.0",
+  "version": "10.0.1",
   "license": "MIT",
   "description": "Electron + Angular 10 boilerplate",
   "homepage": "https://github.com/radiium/elegular",
@@ -14,9 +14,12 @@
     "url": "https://github.com/radiium"
   },
   "keywords": [
-    "boilerplate",
+    "angular 10",
     "electron",
-    "angular 10"
+    "quickstart",
+    "starter",
+    "boilerplate",
+    "templates"
   ],
   "scripts": {
     "test": "ng test",

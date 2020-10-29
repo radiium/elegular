@@ -1,7 +1,7 @@
 # Elegular
 
 ## Description:
-A preconfigured Electron + Angular 10 boilerplate with hot reload and others...
+A preconfigured Electron + Angular 10 starter kit boilerplate with hot reload and others...
 
 #### built with:
 
